@@ -54,6 +54,8 @@ def configure(args):
         "network": args.network,
         "sudo": args.sudo,
     }
+    if args.cert_resolver:
+        config["cert_resolver"] = args.cert_resolver
     runtime.plan(config)
     path = progress.STATE / "config.json"
     if path.exists():
@@ -181,6 +183,9 @@ def main():
         help="your usual SSH USER@HOST or alias; local is a preview only",
     )
     target.add_argument("--url", required=True, help="your calculator's HTTPS origin")
+    target.add_argument(
+        "--cert-resolver", help="existing Traefik certificate resolver for this route"
+    )
     target.add_argument(
         "--network", default="hosting-web", help="existing Traefik network"
     )
