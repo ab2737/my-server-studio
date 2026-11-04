@@ -24,7 +24,7 @@ server baseline or a vulnerability-free image.
 - **New launch or adopted deployment, and reason:** Completed new launch; the
   read-only studio doctor reported `ready` / `launch-new`, with three existing
   containers and no conflicting calculator route. The learner approved launch;
-  the successful new-launch report is preserved in [studio/evidence.json](studio/evidence.json).
+  the successful new-launch report is preserved in [studio/launch-evidence.json](studio/launch-evidence.json).
   A subsequent verification also passed; its `already-managed` provenance
   describes that later check, rather than an adoption of pre-existing work.
 - **Own issue / feature branch:** [Issue #1](https://github.com/ab2737/my-server-studio/issues/1)
@@ -51,12 +51,15 @@ server baseline or a vulnerability-free image.
 Private SSH targets and configuration stay in ignored local state. Share only
 reviewed, selected evidence; never commit credentials or raw server output.
 
+Latest repeat verification is exported separately in [studio/evidence.json](studio/evidence.json).
+The launch report remains immutable in [studio/launch-evidence.json](studio/launch-evidence.json).
+
 ## Evidence to keep
 
 | Evidence | Actual result / link |
 |---|---|
 | Prepared Black/Pylint/pytest and real-image browser checks | All three jobs passed on merged main in [run 41769300855](https://github.com/ab2737/my-server-studio/actions/runs/41769300855), including real-image browser E2E; local Windows limitations remain recorded. |
-| Hosted image/commit, trusted HTTPS, valid and rejected API cases | Launch and repeat verification passed; [new-launch evidence](studio/evidence.json). Multiplication returned 42 (200), division by zero 400, numeric string 422. |
+| Hosted image/commit, trusted HTTPS, valid and rejected API cases | Launch and repeat verification passed; [new-launch evidence](studio/launch-evidence.json). Multiplication returned 42 (200), division by zero 400, numeric string 422. |
 | Preservation of unrelated services | All three pre-existing containers retained identity, state and published ports during launch and verification; see evidence. This is not a complete application health check. |
 | Own prediction, check interpretation, browser observation and keep/revise reason | [LEARNING.md](LEARNING.md): actual browser observations, reviewed AI-assisted post-deployment explanations and explicit keep decision. The missing pre-launch prediction is honestly preserved; AI drafting and help are disclosed. |
 | Accuracy review before publishing learner excerpts | Learner approved the displayed summary with “Yes, publish the summary”. The earlier brief SPEC observation was published before review; this was disclosed in chat. |

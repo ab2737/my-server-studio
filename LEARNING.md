@@ -71,7 +71,7 @@ with 55 passing and 11 failing tests; failures included Windows platform and
 filesystem limitations. The full local suite also encountered a Linux signal
 API unavailable on Windows. Full Linux CI, including browser E2E, passed on pull request #2 (run 41768514803).
 
-See [SPEC.md](SPEC.md), [new-launch evidence](studio/evidence.json), and
+See [SPEC.md](SPEC.md), [new-launch evidence](studio/launch-evidence.json), and
 [issue #1](https://github.com/ab2737/my-server-studio/issues/1). Review these
 records and [PR #2](https://github.com/ab2737/my-server-studio/pull/2).
 The approved post-deployment explanations and keep decision are now included.
