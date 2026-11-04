@@ -1,8 +1,8 @@
 {
   "status": "passed",
   "mode": "hosted",
-  "provenance": "launched",
-  "new_launch": true,
+  "provenance": "already-managed",
+  "new_launch": false,
   "expected": {
     "image": "docker.io/kaw393939/is373_ci_cd@sha256:aec414c990a5de6ed74c9e8dcb105b78f6358c03a8cea70a9d40dcda51c3a8fa",
     "commit": "4600202bad42da0c5ffb11d83ce8364671293d3d"
@@ -41,6 +41,6 @@
     "This is a supplied image, not the learner's build or CI/CD pipeline.",
     "API checks do not prove a human review or whole-server security."
   ],
-  "observed_at": "2026-11-03T20:23:15.048994+00:00",
+  "observed_at": "2026-11-03T20:23:40.501802+00:00",
   "url": "https://calc.angelobustamanteselfhost.com"
 }
