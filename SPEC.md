@@ -3,7 +3,7 @@
 ## STUDIO-001 · Launch a tested calculator on an existing server
 
 **Status:** Approved new launch and repeat runtime verification passed.
-**Next step:** Verify final publication, issue closure and latest main CI.
+**Next step:** Complete the final records PR checks and submit the public repository URL.
 The reviewed AI-assisted explanations and keep decision are recorded; no
 pre-launch prediction is invented.
 **Instructor implementation:** [issue #9](https://github.com/kaw393939/373_hosting/issues/9).
@@ -60,7 +60,7 @@ reviewed, selected evidence; never commit credentials or raw server output.
 | Preservation of unrelated services | All three pre-existing containers retained identity, state and published ports during launch and verification; see evidence. This is not a complete application health check. |
 | Own prediction, check interpretation, browser observation and keep/revise reason | [LEARNING.md](LEARNING.md): actual browser observations, reviewed AI-assisted post-deployment explanations and explicit keep decision. The missing pre-launch prediction is honestly preserved; AI drafting and help are disclosed. |
 | Accuracy review before publishing learner excerpts | Learner approved the displayed summary with “Yes, publish the summary”. The earlier brief SPEC observation was published before review; this was disclosed in chat. |
-| Actual PR, latest CI, merge and issue closure | [PR #2](https://github.com/ab2737/my-server-studio/pull/2) confirmed merged at commit aaa6632; [PR-head CI](https://github.com/ab2737/my-server-studio/actions/runs/41768992116) and [merged-main CI](https://github.com/ab2737/my-server-studio/actions/runs/41769300855) passed. [Issue #1](https://github.com/ab2737/my-server-studio/issues/1) remains open for the documented learner gaps. |
+| Actual PR, latest CI, merge and issue closure | [PR #2](https://github.com/ab2737/my-server-studio/pull/2) confirmed merged at commit aaa6632 and linked to [issue #1](https://github.com/ab2737/my-server-studio/issues/1), now confirmed closed as completed. [PR-head CI](https://github.com/ab2737/my-server-studio/actions/runs/41768992116), [merged-main CI](https://github.com/ab2737/my-server-studio/actions/runs/41769300855), and [approved-learning-record CI](https://github.com/ab2737/my-server-studio/actions/runs/41770057555) passed. The final records PR preserves the reviewed learning record on the submitted main revision. |
 
 Link the exported `studio/evidence.json`, actual CI and issue/PR when available.
 CI does not deploy this server. A fixture, green check, timestamp, closed issue
