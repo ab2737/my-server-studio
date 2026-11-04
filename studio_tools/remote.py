@@ -58,7 +58,13 @@ def validate_config(config):
     if not isinstance(use_sudo, bool):
         raise ValueError("sudo must be true or false")
     origin = _validate_origin(config.get("url", ""), host)
-    return {"host": host, "url": origin, "network": network, "sudo": use_sudo}
+    normalized = {"host": host, "url": origin, "network": network, "sudo": use_sudo}
+    resolver = config.get("cert_resolver")
+    if resolver is not None:
+        if not isinstance(resolver, str) or not NETWORK.fullmatch(resolver):
+            raise ValueError("Use the name of an existing Traefik certificate resolver")
+        normalized["cert_resolver"] = resolver
+    return normalized
 
 
 def _validate_origin(origin, host):
@@ -158,6 +164,11 @@ def compose_model(config, release):
                 f"traefik.http.services.{router}.loadbalancer.server.port": "8000",
             }
         )
+        if config.get("cert_resolver"):
+            labels[f"traefik.http.routers.{router}.tls"] = "true"
+            labels[f"traefik.http.routers.{router}.tls.certresolver"] = config[
+                "cert_resolver"
+            ]
         service["networks"] = ["hosting"]
         model["networks"] = {"hosting": {"external": True, "name": config["network"]}}
     return model

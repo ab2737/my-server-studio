@@ -135,6 +135,16 @@ def test_hosted_plan_uses_one_existing_network_without_second_proxy():
     assert not any(key.endswith(".tls") for key in service["labels"])
 
 
+def test_hosted_plan_can_use_an_existing_certificate_resolver():
+    result = runtime.plan({**HOSTED, "cert_resolver": "letsencrypt"})
+    labels = result["compose"]["services"]["calculator"]["labels"]
+    prefix = f"traefik.http.routers.{remote.ROUTER}"
+    assert labels[f"{prefix}.tls"] == "true"
+    assert labels[f"{prefix}.tls.certresolver"] == "letsencrypt"
+    with pytest.raises(ValueError, match="certificate resolver"):
+        runtime.plan({**HOSTED, "cert_resolver": "bad resolver"})
+
+
 def test_unknown_studio_project_is_not_replaced(monkeypatch, tmp_path):
     calls = stub_docker(
         monkeypatch, [container(project=remote.PROJECT, owner="someone-else")]
