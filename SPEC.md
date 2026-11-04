@@ -3,7 +3,7 @@
 ## STUDIO-001 · Launch a tested calculator on an existing server
 
 **Status:** Approved new launch and repeat runtime verification passed.
-**Next step:** Learner check interpretation and browser observation; full CI pending.
+**Next step:** Review the learning summary; keep decision and check-limit explanation remain incomplete.
 **Instructor implementation:** [issue #9](https://github.com/kaw393939/373_hosting/issues/9).
 Create your own issue from the [lesson template](.github/ISSUE_TEMPLATE/studio-calculator.md).
 
@@ -39,9 +39,12 @@ server baseline or a vulnerability-free image.
   The image is selected by `studio/calculator-release.json`, digest
   `sha256:aec414c990a5de6ed74c9e8dcb105b78f6358c03a8cea70a9d40dcda51c3a8fa`.
   Available memory was 214 MiB without swap; the calculator's 256 MiB ceiling
-  is a limit, not a measured requirement. Runtime memory remains to be observed.
+  is a limit, not a measured requirement. After launch the calculator used
+  approximately 47 MiB and the host had 152 MiB available.
   Local formatting passed and the added resolver test passed; broader checks
-  encountered Windows-specific failures. Full CI and browser E2E remain pending.
+  encountered Windows-specific failures. All three jobs in
+  [CI run 41768514803](https://github.com/ab2737/my-server-studio/actions/runs/41768514803)
+  passed, including the full studio check and browser E2E.
 
 Private SSH targets and configuration stay in ignored local state. Share only
 reviewed, selected evidence; never commit credentials or raw server output.
@@ -50,12 +53,12 @@ reviewed, selected evidence; never commit credentials or raw server output.
 
 | Evidence | Actual result / link |
 |---|---|
-| Prepared Black/Pylint/pytest and real-image browser checks | Not run; full local E2E needs local Docker or actual CI evidence |
+| Prepared Black/Pylint/pytest and real-image browser checks | Full studio CI passed in [run 41768514803](https://github.com/ab2737/my-server-studio/actions/runs/41768514803), including real-image browser E2E; local Windows limitations remain recorded. |
 | Hosted image/commit, trusted HTTPS, valid and rejected API cases | Launch and repeat verification passed; [new-launch evidence](studio/evidence.json). Multiplication returned 42 (200), division by zero 400, numeric string 422. |
 | Preservation of unrelated services | All three pre-existing containers retained identity, state and published ports during launch and verification; see evidence. This is not a complete application health check. |
 | Own prediction, check interpretation, browser observation and keep/revise reason | [LEARNING.md](LEARNING.md): learner observed 42 in browser and API and reported secure loading after restarting Chrome. Prediction, check limits and keep reason remain incomplete; AI assistance disclosed. |
-| Accuracy review before publishing learner excerpts | Pending |
-| Actual PR, latest CI, merge and issue closure | Pending |
+| Accuracy review before publishing learner excerpts | Learner approved the displayed summary with “Yes, publish the summary”. The earlier brief SPEC observation was published before review; this was disclosed in chat. |
+| Actual PR, latest CI, merge and issue closure | [PR #2](https://github.com/ab2737/my-server-studio/pull/2), all three CI jobs passed on commit 9f0f23b; merge and issue closure pending. |
 
 Link the exported `studio/evidence.json`, actual CI and issue/PR when available.
 CI does not deploy this server. A fixture, green check, timestamp, closed issue
