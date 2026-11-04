@@ -3,8 +3,9 @@
 ## STUDIO-001 · Launch a tested calculator on an existing server
 
 **Status:** Approved new launch and repeat runtime verification passed.
-**Next step:** Complete the learner's check-limit explanation and keep decision;
-the missing pre-launch prediction remains honestly recorded.
+**Next step:** Verify final publication, issue closure and latest main CI.
+The reviewed AI-assisted explanations and keep decision are recorded; no
+pre-launch prediction is invented.
 **Instructor implementation:** [issue #9](https://github.com/kaw393939/373_hosting/issues/9).
 Create your own issue from the [lesson template](.github/ISSUE_TEMPLATE/studio-calculator.md).
 
@@ -27,7 +28,7 @@ server baseline or a vulnerability-free image.
   A subsequent verification also passed; its `already-managed` provenance
   describes that later check, rather than an adoption of pre-existing work.
 - **Own issue / feature branch:** [Issue #1](https://github.com/ab2737/my-server-studio/issues/1)
-  (confirmed open in the learner's signed-in GitHub browser) /
+  (lesson issue; final state checked separately) /
   `studio-001-calculator`.
 - **Agreed scope or actual access/configuration gap:** Add only the pinned course
   calculator image on the existing `angelo-cicd_default` network, using the
@@ -57,7 +58,7 @@ reviewed, selected evidence; never commit credentials or raw server output.
 | Prepared Black/Pylint/pytest and real-image browser checks | All three jobs passed on merged main in [run 41769300855](https://github.com/ab2737/my-server-studio/actions/runs/41769300855), including real-image browser E2E; local Windows limitations remain recorded. |
 | Hosted image/commit, trusted HTTPS, valid and rejected API cases | Launch and repeat verification passed; [new-launch evidence](studio/evidence.json). Multiplication returned 42 (200), division by zero 400, numeric string 422. |
 | Preservation of unrelated services | All three pre-existing containers retained identity, state and published ports during launch and verification; see evidence. This is not a complete application health check. |
-| Own prediction, check interpretation, browser observation and keep/revise reason | [LEARNING.md](LEARNING.md): learner observed 42 in browser and API and reported secure loading after restarting Chrome. Prediction, check limits and keep reason remain incomplete; AI assistance disclosed. |
+| Own prediction, check interpretation, browser observation and keep/revise reason | [LEARNING.md](LEARNING.md): actual browser observations, reviewed AI-assisted post-deployment explanations and explicit keep decision. The missing pre-launch prediction is honestly preserved; AI drafting and help are disclosed. |
 | Accuracy review before publishing learner excerpts | Learner approved the displayed summary with “Yes, publish the summary”. The earlier brief SPEC observation was published before review; this was disclosed in chat. |
 | Actual PR, latest CI, merge and issue closure | [PR #2](https://github.com/ab2737/my-server-studio/pull/2) confirmed merged at commit aaa6632; [PR-head CI](https://github.com/ab2737/my-server-studio/actions/runs/41768992116) and [merged-main CI](https://github.com/ab2737/my-server-studio/actions/runs/41769300855) passed. [Issue #1](https://github.com/ab2737/my-server-studio/issues/1) remains open for the documented learner gaps. |
 

@@ -7,15 +7,27 @@ or grade. Learner reviewed the summary and approved publication in this chat.
 
 ## Prediction
 
-Pending. The learner said “i dont kno” when asked how the request reaches the
-calculator. AI explained DNS and Traefik routing and offered a choice; no
-learner prediction was supplied.
+No pre-launch prediction was supplied; the learner said “i dont kno”.
+This historical gap is preserved. After deployment, AI drafted the following
+explanation, which the learner confirmed reflects their understanding:
+
+“DNS points my calculator hostname to my droplet. Traefik receives the HTTPS
+request and routes it to the calculator container based on the hostname.”
+
+This is an AI-assisted explanation reviewed after deployment, not an earlier
+prediction or independently authored answer.
 
 ## Check interpretation
 
-The learner said “its working” after AI presented the successful multiplication
-check. What this check leaves untested remains Pending. AI supplied the test
-input, expected result and actual response.
+The learner initially said “its working” after AI presented the successful
+multiplication check. They later reviewed and adopted this AI-drafted explanation:
+
+“Seeing 42 in both results shows that the browser's calculation and the server's
+API agree for 6 × 7. That one example doesn't prove every operation, invalid
+input, or heavy traffic works correctly.”
+
+AI supplied the test input, expected result, actual response and explanation;
+the learner confirmed that the explanation reflects their understanding.
 
 ## Browser observation
 
@@ -28,15 +40,21 @@ result, not a claim that every possible application behavior was tested.
 
 ## Keep decision
 
-Pending. AI asked whether to keep the deployment and why; the learner has not
-yet supplied an explicit decision with a reason. Asking AI to finish remaining
-work is not recorded as that explanation.
+The learner confirmed their choice to keep the deployment and adopted this
+AI-drafted reason:
+
+“I want to keep the deployment because both results agree, HTTPS works, and the
+checks found that my existing containers were preserved.”
 
 ## Review
 
 The learner reviewed the summary of their browser results, secure loading,
 AI assistance and remaining gaps, and replied “Yes, publish the summary”.
-This approval establishes record accuracy, not a completed explanation of the gaps.
+They subsequently answered “yes” when asked whether the displayed AI-drafted
+explanations reflect their understanding, whether they choose to keep the
+deployment for the stated reason, and whether to add those answers to the
+assignment. AI assistance is disclosed; approval is not independent evidence
+of understanding.
 
 ## AI work and next step
 
@@ -56,5 +74,7 @@ API unavailable on Windows. Full Linux CI, including browser E2E, passed on pull
 See [SPEC.md](SPEC.md), [new-launch evidence](studio/evidence.json), and
 [issue #1](https://github.com/ab2737/my-server-studio/issues/1). Review these
 records and [PR #2](https://github.com/ab2737/my-server-studio/pull/2).
-Publish the approved summary, inspect CI for the latest commit, and resolve
-remaining learner contributions before reporting assignment completion.
+The approved post-deployment explanations and keep decision are now included.
+The absent pre-launch prediction remains a historical gap, not a fabricated
+response. Inspect actual latest CI and GitHub completion separately from this
+learning record.
