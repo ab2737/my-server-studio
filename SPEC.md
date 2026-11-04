@@ -3,7 +3,8 @@
 ## STUDIO-001 · Launch a tested calculator on an existing server
 
 **Status:** Approved new launch and repeat runtime verification passed.
-**Next step:** Review the learning summary; keep decision and check-limit explanation remain incomplete.
+**Next step:** Complete the learner's check-limit explanation and keep decision;
+the missing pre-launch prediction remains honestly recorded.
 **Instructor implementation:** [issue #9](https://github.com/kaw393939/373_hosting/issues/9).
 Create your own issue from the [lesson template](.github/ISSUE_TEMPLATE/studio-calculator.md).
 
@@ -19,7 +20,7 @@ as adoption, not a fresh launch. This bounded lesson does not certify the whole
 server baseline or a vulnerability-free image.
 
 - **Public hostname:** `https://calc.angelobustamanteselfhost.com`.
-- **New launch or adopted deployment, and reason:** Proposed new launch; the
+- **New launch or adopted deployment, and reason:** Completed new launch; the
   read-only studio doctor reported `ready` / `launch-new`, with three existing
   containers and no conflicting calculator route. The learner approved launch;
   the successful new-launch report is preserved in [studio/evidence.json](studio/evidence.json).
@@ -43,7 +44,7 @@ server baseline or a vulnerability-free image.
   approximately 47 MiB and the host had 152 MiB available.
   Local formatting passed and the added resolver test passed; broader checks
   encountered Windows-specific failures. All three jobs in
-  [CI run 41768514803](https://github.com/ab2737/my-server-studio/actions/runs/41768514803)
+  [merged-main CI run 41769300855](https://github.com/ab2737/my-server-studio/actions/runs/41769300855)
   passed, including the full studio check and browser E2E.
 
 Private SSH targets and configuration stay in ignored local state. Share only
@@ -53,12 +54,12 @@ reviewed, selected evidence; never commit credentials or raw server output.
 
 | Evidence | Actual result / link |
 |---|---|
-| Prepared Black/Pylint/pytest and real-image browser checks | Full studio CI passed in [run 41768514803](https://github.com/ab2737/my-server-studio/actions/runs/41768514803), including real-image browser E2E; local Windows limitations remain recorded. |
+| Prepared Black/Pylint/pytest and real-image browser checks | All three jobs passed on merged main in [run 41769300855](https://github.com/ab2737/my-server-studio/actions/runs/41769300855), including real-image browser E2E; local Windows limitations remain recorded. |
 | Hosted image/commit, trusted HTTPS, valid and rejected API cases | Launch and repeat verification passed; [new-launch evidence](studio/evidence.json). Multiplication returned 42 (200), division by zero 400, numeric string 422. |
 | Preservation of unrelated services | All three pre-existing containers retained identity, state and published ports during launch and verification; see evidence. This is not a complete application health check. |
 | Own prediction, check interpretation, browser observation and keep/revise reason | [LEARNING.md](LEARNING.md): learner observed 42 in browser and API and reported secure loading after restarting Chrome. Prediction, check limits and keep reason remain incomplete; AI assistance disclosed. |
 | Accuracy review before publishing learner excerpts | Learner approved the displayed summary with “Yes, publish the summary”. The earlier brief SPEC observation was published before review; this was disclosed in chat. |
-| Actual PR, latest CI, merge and issue closure | [PR #2](https://github.com/ab2737/my-server-studio/pull/2), all three CI jobs passed on commit 9f0f23b; merge and issue closure pending. |
+| Actual PR, latest CI, merge and issue closure | [PR #2](https://github.com/ab2737/my-server-studio/pull/2) confirmed merged at commit aaa6632; [PR-head CI](https://github.com/ab2737/my-server-studio/actions/runs/41768992116) and [merged-main CI](https://github.com/ab2737/my-server-studio/actions/runs/41769300855) passed. [Issue #1](https://github.com/ab2737/my-server-studio/issues/1) remains open for the documented learner gaps. |
 
 Link the exported `studio/evidence.json`, actual CI and issue/PR when available.
 CI does not deploy this server. A fixture, green check, timestamp, closed issue
