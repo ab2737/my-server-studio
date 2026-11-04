@@ -58,4 +58,3 @@ See [SPEC.md](SPEC.md), [new-launch evidence](studio/evidence.json), and
 records and [PR #2](https://github.com/ab2737/my-server-studio/pull/2).
 Publish the approved summary, inspect CI for the latest commit, and resolve
 remaining learner contributions before reporting assignment completion.
-
